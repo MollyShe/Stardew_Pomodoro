@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'CustomFont'; 
+    src: url('./Stardew_Valley.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal; 
+}
+
+body {
+    font-family: "CustomFont", sans-serif;
+    background-image: url('./Stardew_intro_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;  
+    text-align: center;
+    background-image: url('./boardGameBorder.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 680px;
+    height: 350px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+#timer {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;  /* Align buttons in a row */
+    justify-content: center;  /* Center the buttons */
+    gap: 40px;  /* Add space between buttons (adjust this value to increase/decrease spacing) */
+}
+
+.controls button {
+    background-image: url('./DialogBoxGreen.png'); /* Path to the uploaded image */
+    background-size: 100% 100%; /* Ensure the background image covers the entire button */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center;  /* Center the background image */
+    
+    background-color: transparent; /* Remove any default background color */
+    border: none;  /* Remove the white border */
+    padding: 0;    /* Remove any default padding */
+    margin: 0;     /* Remove any default margin */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Default shadow for 3D effect */
+
+    width: 125px;  /* Set the button width */
+    height: 110px; /* Set the button height */
+
+    outline: none; /* Remove the outline on focus */
+    
+    color: brown;  /* Text color */
+    font-size: 25px; /* Button text size */
+    cursor: pointer; /* Change cursor to pointer */
+    
+    text-align: center; /* Align text to center */
+    line-height: 100px; /* Vertically center the text */
+    
+    box-sizing: border-box; /* Include padding and border in width and height */
+    border-radius: 10px; /* Remove rounded edges */
+    
+    font-family: "CustomFont", sans-serif; /* Ensure buttons use the CustomFont */
+    
+    transition: box-shadow 0.1s ease, transform 0.1s ease; /* Smooth transition effect */
+}
+
+/* Hover state: Increase the shadow for a hover effect */
+.controls button:hover {
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Active (clicked) state: Reduce the shadow and move the button down to simulate a press */
+.controls button:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Smaller shadow when pressed */
+    transform: translateY(3px); /* Move the button down slightly */
+}
+
+
